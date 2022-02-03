@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,7 +25,14 @@ Route::get('/', function () {
     ]);
 });
 
-// Route::get('students',[])
+Route::get('students',[StudentController::class, 'index'])->name('students');
+Route::get('students-create',[StudentController::class, 'create'])->name('students.create');
+
+Route::post('store', [StudentController::class, 'store'])->name('store');
+
+
+
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

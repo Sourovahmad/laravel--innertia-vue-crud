@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\student;
 use App\Http\Requests\StorestudentRequest;
 use App\Http\Requests\UpdatestudentRequest;
+use Inertia\Inertia;
 
 class StudentController extends Controller
 {
@@ -15,7 +16,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $students = student::all();
+        return Inertia::render('students/index', [
+            'students' => $students,
+        ]);
     }
 
     /**
@@ -25,7 +29,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('students/create');
     }
 
     /**
@@ -36,7 +40,8 @@ class StudentController extends Controller
      */
     public function store(StorestudentRequest $request)
     {
-        //
+        $student = student::create($request->validated());
+        return inertia::render('students/index');
     }
 
     /**

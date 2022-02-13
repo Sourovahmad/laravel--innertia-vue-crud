@@ -25,10 +25,17 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('students',[StudentController::class, 'index'])->name('students');
-Route::get('students-create',[StudentController::class, 'create'])->name('students.create');
+Route::middleware('auth')->group(function()
+{
+    Route::get('students',[StudentController::class, 'index'])->name('students');
+    Route::get('students-create',[StudentController::class, 'create'])->name('students.create');
+    Route::post('store', [StudentController::class, 'store'])->name('store');
 
-Route::post('store', [StudentController::class, 'store'])->name('store');
+
+    Route::get('students/{student}',[StudentController::class, 'edit'])->name('students.edit');
+
+});
+
 
 
 

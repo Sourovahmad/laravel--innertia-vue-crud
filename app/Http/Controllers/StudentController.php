@@ -41,7 +41,7 @@ class StudentController extends Controller
     public function store(StorestudentRequest $request)
     {
         $student = student::create($request->validated());
-        return inertia::render('students/index');
+        return redirect()->route('students');
     }
 
     /**
@@ -63,7 +63,7 @@ class StudentController extends Controller
      */
     public function edit(student $student)
     {
-        //
+        return $student;
     }
 
     /**

@@ -21853,16 +21853,10 @@ var _hoisted_20 = {
 var _hoisted_21 = {
   "class": "text-sm font-medium text-gray-900"
 };
-
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+var _hoisted_22 = {
   "class": "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "text-indigo-600 hover:text-indigo-900"
-}, "Edit")], -1
-/* HOISTED */
-);
-
+};
+var _hoisted_23 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Head"], {
     title: "Dashboard"
@@ -21888,7 +21882,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* TEXT */
         )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(student.address), 1
         /* TEXT */
-        )])])]), _hoisted_22]);
+        )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+          href: "students/".concat(student.id),
+          "class": "text-indigo-600 hover:text-indigo-900"
+        }, "Edit", 8
+        /* PROPS */
+        , _hoisted_23)])]);
       }), 128
       /* KEYED_FRAGMENT */
       )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" More people... ")])])])])])])])])];
@@ -46899,6 +46898,27 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/Pages/students/single.vue":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/students/single.vue ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var D_Projects_laravel_innertia_vue_innertia_crud_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+const script = {}
+
+;
+const __exports__ = /*#__PURE__*/(0,D_Projects_laravel_innertia_vue_innertia_crud_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"])(script, [['__file',"resources/js/Pages/students/single.vue"]])
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/Components/Button.vue?vue&type=script&lang=js":
 /*!********************************************************************!*\
   !*** ./resources/js/Components/Button.vue?vue&type=script&lang=js ***!
@@ -47877,7 +47897,8 @@ var map = {
 	"./Dashboard.vue": "./resources/js/Pages/Dashboard.vue",
 	"./Welcome.vue": "./resources/js/Pages/Welcome.vue",
 	"./students/create.vue": "./resources/js/Pages/students/create.vue",
-	"./students/index.vue": "./resources/js/Pages/students/index.vue"
+	"./students/index.vue": "./resources/js/Pages/students/index.vue",
+	"./students/single.vue": "./resources/js/Pages/students/single.vue"
 };
 
 

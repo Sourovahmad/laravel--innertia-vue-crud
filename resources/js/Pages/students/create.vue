@@ -12,9 +12,13 @@
            
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-start m-2 p-2">
-                <Link href="students" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <Link :href="route('students')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Go Back
                 </Link>
+            </div>
+
+            <div class="text-danger">
+              
             </div>
 
 <div>
@@ -28,6 +32,7 @@
       </div>
     </div>
     <div class="mt-5 md:mt-0 md:col-span-2">
+
       <form @submit.prevent="submitForm" method="POST">
 
         <div class="shadow sm:rounded-md sm:overflow-hidden">
@@ -90,6 +95,22 @@
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
 import { Head,Link, useForm } from '@inertiajs/inertia-vue3';
 
+
+
+   export default{
+     data() {
+       return {
+         isEditing: false,
+       }
+     },
+
+     methods:{
+       defineProps({
+          student:Object,
+       });
+     }
+   }
+
     const form = useForm({
         name: '',
         address: '',
@@ -98,5 +119,6 @@ import { Head,Link, useForm } from '@inertiajs/inertia-vue3';
     function submitForm() {
         form.post('store');
     }
+
 
 </script>

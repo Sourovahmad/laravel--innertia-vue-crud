@@ -63,7 +63,9 @@ class StudentController extends Controller
      */
     public function edit(student $student)
     {
-        return $student;
+      return Inertia::render('students/create', [
+          'student' => $student,
+      ]);
     }
 
     /**

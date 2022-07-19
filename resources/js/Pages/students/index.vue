@@ -68,10 +68,10 @@
             
             
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a :href="`students/${student.id}`" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                <Link :href="`/students/${student.id}`" class="text-indigo-600 hover:text-indigo-900">Edit</Link>
               </td>
             </tr>
-
+             
             <!-- More people... -->
           </tbody>
         </table>
@@ -87,6 +87,8 @@
 <script setup>
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
     import { Head,Link } from '@inertiajs/inertia-vue3';
+    import PaginationVue from '../Pagination/Pagination.vue';
+    
 
     const props = defineProps({
         students: Array,
